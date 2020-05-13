@@ -1,0 +1,33 @@
+<div class="container">
+  <br>
+    <ng-container *ngIf="properties?.length === 0" class="align-items-center">
+        <h2 class="text-center">No Properties!</h2>
+        <a *appRoleShow="['ROLE_GUEST']" routerLink="/reservation/create"><h2 class="text-center">Search for other properties!</h2></a>
+    </ng-container>
+    <ng-container *ngIf="properties?.length !== 0">
+    <div class="row" >
+        <div class="col-lg-4 col-sm-6 portfolio-item" *ngFor="let property of properties">
+           <button (click)="sendProperty(property.id)"><div class="card h-100">
+                <ng-container>
+                        <img class="card-img-top" [src]="property.firstPicture"
+                             th:alt="property.name" sec:authorize="hasRole('ROLE_GUEST')">
+                </ng-container>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <p>{{property?.name}}</p>
+                    </h4>
+                    <h4 class="card-title">
+                        <p>Price per night: {{property?.price}}</p>
+                    </h4>
+                    <h4 class="card-title">
+                        <p>Location: {{property?.city.name}}</p>
+                    </h4>
+                    <p class="card-text">{{property?.description | shortDesc}}</p>
+                    <p>Average Reviews level: {{property?.averageReviews}}</p>
+                </div>
+            </div></button>
+            <p>
+        </div>
+    </div>
+  </ng-container>
+</div>

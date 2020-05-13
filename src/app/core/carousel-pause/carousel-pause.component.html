@@ -1,0 +1,12 @@
+<ngb-carousel class="full-width"  #carousel interval="3000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+  <ng-template ngbSlide *ngFor="let img of images">
+    <div class="carousel-caption">
+      <h3>{{img.name}}</h3>
+    </div>
+    <a  target="_blank" rel="nofollow noopener noreferrer">
+      <div class="picsum-img-wrapper" >
+        <img class="w-100" [src]="img.url" alt="img.name">
+      </div>
+    </a>
+  </ng-template>
+</ngb-carousel>
