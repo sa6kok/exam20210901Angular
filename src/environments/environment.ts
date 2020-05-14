@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://api-local-bnb.herokuapp.com'
+  apiUrl: 'http://localhost:8080'
 };
 
 /*
