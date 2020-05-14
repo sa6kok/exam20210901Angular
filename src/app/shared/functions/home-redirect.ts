@@ -8,7 +8,7 @@ export function redirectHome(roles: string[], router: Router) {
   } else if (roles.includes('ROLE_HOST')) {
     return router.navigate(['property/show/my']);
   } else {
-    return router.navigate(['home/index']);
+    return router.navigate(['home']);
   }
 }
 

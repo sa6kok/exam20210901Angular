@@ -12,7 +12,7 @@ const routes: Routes = [
     children:
       [
         {
-          path: 'index',
+          path: '',
           component: IndexComponent,
           pathMatch: 'full',
         },
