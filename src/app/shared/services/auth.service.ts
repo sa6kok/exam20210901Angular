@@ -16,8 +16,8 @@ export class AuthService {
 
   constructor(private tokenStorage: TokenStorageService,
               private toastr: ToastrService) {
-    this.isLoggedIn = !!tokenStorage.getToken();
-    this.roles = this.tokenStorage.getUser().roles;
+    this.isLoggedIn = !!tokenStorage?.getToken();
+    this.roles = this.tokenStorage?.getUser()?.roles;
   }
 
   logout() {
@@ -35,10 +35,10 @@ export class AuthService {
   }
 
   getUsername() {
-   return this.tokenStorage.getUser()?.username;
+   return this.tokenStorage?.getUser()?.username;
   }
 
   getUser() {
-    return this.tokenStorage.getUser();
+    return this.tokenStorage?.getUser();
   }
 }
