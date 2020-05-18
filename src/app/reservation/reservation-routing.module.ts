@@ -7,7 +7,7 @@ import { DetailsCreateComponent } from './details-create/details-create.componen
 import { AuthGuard } from '../guards/auth.guard';
 const routes: Routes = [
   {
-    path: 'reservation',
+    path: '',
     children: [
       { path: 'create', component: CreateComponent },
       {

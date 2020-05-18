@@ -9,7 +9,7 @@ import { DetailsPropertyComponent } from '../shared/details-property/details-pro
 
 const routes: Routes = [
   {
-    path: 'property',
+    path: '',
     children: [
       {
         path: 'create',

@@ -13,6 +13,12 @@ const routes: Routes = [
     path: 'error/:error',
     component: NotFoundComponent
   },
+  {path: 'property',
+   loadChildren: () => import('./property/property.module').then(mod => mod.PropertyModule),
+  },
+  {path: 'reservation',
+   loadChildren: () => import('./reservation/reservation.module').then(mod => mod.ReservationModule),
+  },
   {
     path: '**',
     component: NotFoundComponent

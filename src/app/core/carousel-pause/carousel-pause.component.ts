@@ -8,7 +8,7 @@ url: 'https://la-bulgarie.fr/media/pages/266/big/cdce3b86bbf1b118acd10f50a681050
  url: 'https://www.orientalescape.com/images/thailand/header/1900x800/phuket02.jpg'},
 {name: 'The best Sunset',
 url: 'https://i.pinimg.com/originals/b3/0a/8a/b30a8a2e813848087c7d22ed7ea0365a.jpg'},
-{name: 'The best city in Eorupe - Plovdiv',
+{name: 'The best city in Europe - Plovdiv',
 url: 'https://hayvan-storage-wordpress-master-studiowien.s3.amazonaws.com/uploads/2019/01/DSCF3908-kl-1-1984x1116.jpg'}
 ];
 
