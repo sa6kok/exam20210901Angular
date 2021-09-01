@@ -21,8 +21,8 @@ export class PropertyService {
     return this.http.get<ICity[]>(`search/cities/${country}`);
   }
 
-  checkProprtiesForCity(city: string) {
-    return this.http.get<boolean>(`search/check/${city}`);
+  checkProprtiesForCity(city?: string) {
+    return this.http.get<number>(`search/check/${city}`);
   }
 
   loadPropertiesWhithoutDates(country: string, city?: string): Observable<IProperty[]> {

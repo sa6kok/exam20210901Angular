@@ -20,6 +20,10 @@ export class SearchComponent {
 
   hasNoProperties: boolean;
 
+  nizLength = 0;
+
+  nizLengthJava = 0;
+
   constructor(
     private service: PropertyService,
     private router: Router) {
@@ -33,16 +37,34 @@ export class SearchComponent {
     this.cities$ = this.service.loadCities(country).pipe(shareReplay(1));
   }
 
-  checkIfProperties(city: string) {
-    this.service.checkProprtiesForCity(city).subscribe(resp => this.hasNoProperties = resp);
-  }
+  // checkIfProperties(city: string) {
+  //   this.service.checkProprtiesForCity(city).subscribe(resp => this.hasNoProperties = resp);
+  // }
 
-  onSubmit(form: NgForm) {
-    const country = form.value.country.name;
-    let city = form.value.city.name;
-    if (city === undefined) {
-      city = '';
+  // onSubmit(form: NgForm) {
+  //   const country = form.value.country.name;
+  //   let city = form.value.city.name;
+  //   if (city === undefined) {
+  //     city = '';
+  //   }
+  //   this.router.navigate([`property/show/${country}`, { city }]);
+  // }
+
+  calculate(niz: string){
+    var count = 0;
+    for (let i = 0; i < niz.length; i++) {
+      if (!isNaN(parseInt(niz[i]))) {
+        count++;
+      }
     }
-    this.router.navigate([`property/show/${country}`, { city }]);
+
+    this.nizLength = count;
+  }
+  onSubmit(form: NgForm) {
+    const niz = form.value.niz;
+
+    this.service.checkProprtiesForCity(niz).subscribe(resp => this.nizLengthJava = resp);
+
+
   }
 }
