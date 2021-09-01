@@ -1,0 +1,14 @@
+@startuml ServerClients
+Client -> Server: Request (niz: string)
+Server --> Client:  Response (number: int)
+
+Client2 -> Server: Request (niz: string)
+Server --> Client2:  Response (number: int)
+
+Client -> Server: Request (niz: string)
+Server --> Client:  Response (number: int)
+
+Client2 -> Server: Request (niz: string)
+Server --> Client2:  Response (number: int)
+
+@enduml
